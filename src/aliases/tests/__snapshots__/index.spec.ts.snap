@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generation literals generates primitives types to zod matchers 1`] = `
+"import * as z from 'zod'
+
+const LitString = z.literal(\\"literal-string\\")
+const LitNumber = z.literal(123)
+const LitBoolean = z.literal(true)"
+`;
+
+exports[`generation mixed primitives and literals generates primitives and literal types to zod matchers 1`] = `
+"import * as z from 'zod'
+
+const LitS = z.literal(\\"dummy\\")
+const PS = z.string()
+const PB = z.boolean()
+const LitB = z.literal(false)
+const LitN = z.literal(-420)
+const PN = z.number()"
+`;
+
+exports[`generation primitives generates primitives types to zod matchers 1`] = `
+"import * as z from 'zod'
+
+const StringP = z.string()
+const NumberP = z.number()
+const BooleanP = z.boolean()
+const UndefinedP = z.undefined()
+const NullP = z.null()
+const VoidP = z.void()
+const AnyP = z.any()
+const UnknownP = z.unknown()"
+`;
